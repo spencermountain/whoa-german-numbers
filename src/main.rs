@@ -9,7 +9,8 @@ fn main() {
     // let s = lib::num_to_text(3);
     // println!("\n{:?}\n", s);
 
-    let s = text_to_num("dreitausend");
+    // let s = text_to_num("einundzwanzig");
+    let s = text_to_num("achtzehn");
     println!("\n{:?}\n", s);
     // data::generate();
     // let words = words::generate();

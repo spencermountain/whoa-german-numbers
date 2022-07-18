@@ -1,4 +1,5 @@
 // pub const ARR: [i32; 4] = [3, 1, 4, 2];
+use std::collections::HashMap;
 
 #[allow(unused_variables, dead_code)]
 pub const SMALLS: [(i32, &str, &str); 19] = [
@@ -41,7 +42,24 @@ pub const MULTIPLES: [(i32, &str, &str); 4] = [
     (1000000, "million", "millionste"),
 ];
 
-pub fn generate() -> Vec<String> {
+pub fn to_number() -> HashMap<String, i32> {
+    let mut words = HashMap::new();
+    for tup in SMALLS {
+        words.insert(tup.1.to_string(), tup.0);
+        words.insert(tup.2.to_string(), tup.0);
+    }
+    for tup in TENS {
+        words.insert(tup.1.to_string(), tup.0);
+        words.insert(tup.2.to_string(), tup.0);
+    }
+    for tup in MULTIPLES {
+        words.insert(tup.1.to_string(), tup.0);
+        words.insert(tup.2.to_string(), tup.0);
+    }
+    words
+}
+
+pub fn all_words() -> Vec<String> {
     let mut words = Vec::new();
     for tup in SMALLS {
         words.push(tup.1.to_string());
