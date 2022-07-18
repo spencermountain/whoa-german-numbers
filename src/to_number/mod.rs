@@ -48,7 +48,7 @@ fn calculate(tokens: Vec<String>) -> i32 {
 /// Convert a german word to a integer
 pub fn text_to_num(s: &str) -> i32 {
     let tokens = tokenize::to_tokens(s);
-    println!("\n{:?}\n", tokens);
+    // println!("\n{:?}\n", tokens);
     let sum = calculate(tokens);
     sum
 }
