@@ -6,6 +6,8 @@ edition = "2021"
 repository = "https://github.com/spencermountain/whoa-german-numbers"
 authors = ["Spencer Kelly <spencermountain@gmail.com>"]
 keywords = ["german", "numbers"]
+documentation = "https://docs.rs/whoa-german-numbers"
+categories = ["parsing","text-processing"]
 readme = "README.md"
 license = "MIT"
 
