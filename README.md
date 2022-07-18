@@ -1,5 +1,5 @@
 > **Note**
-> plz go easy on me, it's my first crate!
+>  it's my first crate, plz go easy on me!
 
 # whoa-german-numbers
 parse textual german number formats in rust
@@ -10,8 +10,9 @@ parse textual german number formats in rust
 [![License: Apache-2.0/MIT](https://img.shields.io/crates/l/whoa-german-numbers.svg)](#license)
 
 
-### "fünf" -> 5
+### text_to_number - "fünf" -> 5
 Convert written german numbers like "dreitausend" to integers (like 3000).
+
 ```rust
 use whoa_german_numbers::text_to_number;
 
@@ -21,7 +22,7 @@ assert_eq!(text_to_number("zweihundertzehn"), 210);
 ```
 
 
-### 5 -> "fünf"
+### number_to_text - 5 -> "fünf"
 Convert an integer (like 81), into a german text number, like "einundachtzig".
 ```rust
 use whoa_german_numbers::number_to_text;
