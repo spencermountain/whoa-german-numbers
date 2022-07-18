@@ -1,8 +1,8 @@
 /*!
-`whoa-german-numbers` is a crate that parses and converts written german numbers like "dreitausend" and "einundachtzig" into integers.
+`whoa-german-numbers` is a crate that parses and converts written german numbers like "dreitausend" back and forth into integers.
 
 
-Notably, german numbers are un-segmented by spaces or dashes.
+Notably, german numbers are not segmented by spaces or dashes.
 */
 
 /// Convert written german numbers like "dreitausend" to integers (like 3000).

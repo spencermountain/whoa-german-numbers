@@ -61,7 +61,6 @@ pub fn num_to_text(n: i32) -> String {
         num = res.0;
         out += &res.1;
     }
-    println!("\n{:?}\n", num);
     if num > 19 {
         let res = two_digit(num);
         num = res.0;

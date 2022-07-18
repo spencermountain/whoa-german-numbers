@@ -14,7 +14,6 @@ pub fn big_numbers(num: i32) -> (i32, String) {
                     if w == "eins" {
                         w = "ein";
                     }
-                    println!("\nbig: {} x {:?}\n", w, mult);
                     out += w;
                     out += word;
                     num -= tup.0 * mult
