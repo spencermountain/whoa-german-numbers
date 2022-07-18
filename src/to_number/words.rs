@@ -1,7 +1,6 @@
 // pub const ARR: [i32; 4] = [3, 1, 4, 2];
 use std::collections::HashMap;
 
-#[allow(unused_variables, dead_code)]
 pub const SMALLS: [(i32, &str, &str); 19] = [
     (1, "eins", "erste"),
     (2, "zwei", "zweite"),
@@ -23,7 +22,6 @@ pub const SMALLS: [(i32, &str, &str); 19] = [
     (18, "achtzehn", "achtzehnte"),
     (19, "neunzehn", "neunzehnte"),
 ];
-#[allow(unused_variables, dead_code)]
 pub const TENS: [(i32, &str, &str); 8] = [
     (20, "zwanzig", "zwanzigste"),
     (30, "dreißig", "dreißigste"),
@@ -34,7 +32,6 @@ pub const TENS: [(i32, &str, &str); 8] = [
     (80, "achtzig", "achtzigste"),
     (90, "neunzig", "neunzigste"),
 ];
-#[allow(unused_variables, dead_code)]
 pub const MULTIPLES: [(i32, &str, &str); 4] = [
     (100, "hundert", "hundertste"),
     (1000, "tausend", "tausendste"),

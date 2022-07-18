@@ -23,6 +23,7 @@ pub use to_number::text_to_num;
 /// use whoa_german_numbers::num_to_text;
 ///
 /// assert_eq!(num_to_text(81), "einundachtzig");
+/// assert_eq!(num_to_text(5), "fünf");
 /// ```
 pub mod to_text;
 pub use to_text::num_to_text;
