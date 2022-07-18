@@ -1,9 +1,11 @@
 [package]
 name = "whoa-german-numbers"
 description = "parse and interpret written german numbers"
-version = "0.0.1"
+version = "0.0.2"
 edition = "2021"
 repository = "https://github.com/spencermountain/whoa-german-numbers"
+authors = ["Spencer Kelly <spencermountain@gmail.com>"]
+keywords = ["german", "numbers"]
 readme = "README.md"
 license = "MIT"
 
