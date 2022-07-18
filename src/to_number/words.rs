@@ -56,6 +56,8 @@ pub fn to_number() -> HashMap<String, i32> {
         words.insert(tup.1.to_string(), tup.0);
         words.insert(tup.2.to_string(), tup.0);
     }
+    // add misc
+    words.insert("ein".to_string(), 1);
     words
 }
 
@@ -73,6 +75,9 @@ pub fn all_words() -> Vec<String> {
         words.push(tup.1.to_string());
         words.push(tup.2.to_string());
     }
+    // add misc
+    words.push("und".to_string());
+    words.push("ein".to_string());
     // sort words by longest-first
     words.sort_by(|a, b| b.len().cmp(&a.len()));
     words

@@ -169,10 +169,10 @@ fn from_ordinal() {
         (15, "fünfzehn", "fünfzehnte"),
         (16, "sechzehn", "sechzehnte"),
         (17, "siebzehn", "siebzehnte"),
-        (18, "achtzehn", "achtdzehnte"),
+        (18, "achtzehn", "achtzehnte"),
         (19, "neunzehn", "neunzehnte"),
     ];
     for a in arr {
-        assert_eq!(text_to_num(a.2), a.0, "ordinal '{}'", a.1);
+        assert_eq!(text_to_num(a.2), a.0, "ordinal '{}'", a.2);
     }
 }

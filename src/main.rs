@@ -10,7 +10,8 @@ fn main() {
     // println!("\n{:?}\n", s);
 
     // let s = text_to_num("einundzwanzig");
-    let s = text_to_num("achtzehn");
+    // let s = text_to_num("eintausendeinhunderteins");
+    let s = text_to_num("hunderteins");
     println!("\n{:?}\n", s);
     // data::generate();
     // let words = words::generate();
