@@ -19,7 +19,6 @@ fn calculate(tokens: Vec<String>) -> i32 {
         }
         //get num from word dictionary
         let num = to_number.get(&w).unwrap_or(&0);
-        // println!("\n{:?}\n", num);
 
         // support 'neun * hundert'
         if is_multiple.contains(&w.as_str()) {
@@ -46,11 +45,21 @@ fn calculate(tokens: Vec<String>) -> i32 {
 }
 
 /// Convert a german word to a integer
-pub fn text_to_num(s: &str) -> i32 {
+pub fn to_number(s: &str) -> Option<i32> {
+    //this is the only way a 0 result is valid
+    // 'null' is the german word for 0 ... :o
+    if s == "null" {
+        return Some(0);
+    }
+    // split "einhundert" to [ein, hundert]
     let tokens = tokenize::to_tokens(s);
-    // println!("\n{:?}\n", tokens);
+    // produce a number
     let sum = calculate(tokens);
-    sum
+    // we found nothing, and not a valid 0
+    if sum == 0 {
+        return None;
+    }
+    Some(sum)
 }
 
 #[cfg(test)]
@@ -58,7 +67,7 @@ mod tests {
     use super::*;
     #[test]
     fn to_num() {
-        assert_eq!(15, text_to_num("fünfzehnte"));
-        assert_eq!(15, text_to_num("fünfzehn"));
+        assert_eq!(15, to_number("fünfzehnte").unwrap());
+        assert_eq!(15, to_number("fünfzehn").unwrap());
     }
 }

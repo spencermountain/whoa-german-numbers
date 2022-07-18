@@ -1,7 +1,17 @@
-use whoa_german_numbers::text_to_num;
+use whoa_german_numbers::text_to_number;
 
 #[test]
-fn text_to_numer() {
+fn no_number() {
+    assert_eq!(text_to_number("foobar").is_none(), true);
+    assert_eq!(text_to_number("").is_none(), true);
+    assert_eq!(text_to_number(" ").is_none(), true);
+    assert_eq!(text_to_number("elf").is_none(), false);
+    assert_eq!(text_to_number("null").is_none(), false);
+    // assert_eq!(text_to_num(" elf ").is_none(), false);
+}
+
+#[test]
+fn to_number() {
     let arr = [
         (0, "null"),
         (1, "eins"),
@@ -149,7 +159,7 @@ fn text_to_numer() {
         (500000, "fünfhunderttausend"), //	five hundred thousand
     ];
     for a in arr {
-        assert_eq!(text_to_num(a.1), a.0, "text: '{}'", a.1);
+        assert_eq!(text_to_number(a.1).unwrap_or(9999), a.0, "text: '{}'", a.1);
     }
 }
 
@@ -177,6 +187,6 @@ fn from_ordinal() {
         (19, "neunzehn", "neunzehnte"),
     ];
     for a in arr {
-        assert_eq!(text_to_num(a.2), a.0, "ordinal '{}'", a.2);
+        assert_eq!(text_to_number(a.2).unwrap(), a.0, "ordinal '{}'", a.2);
     }
 }

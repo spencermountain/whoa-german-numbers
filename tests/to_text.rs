@@ -1,7 +1,7 @@
-use whoa_german_numbers::num_to_text;
+use whoa_german_numbers::number_to_text;
 
 #[test]
-fn number_to_text() {
+fn to_text() {
     let arr = [
         (0, "null"),
         (1, "eins"),
@@ -145,6 +145,6 @@ fn number_to_text() {
         (500000, "fünfhunderttausend"), //	five hundred thousand
     ];
     for a in arr {
-        assert_eq!(num_to_text(a.0), a.1, "text: '{}'", a.1);
+        assert_eq!(number_to_text(a.0), a.1, "text: '{}'", a.1);
     }
 }

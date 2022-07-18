@@ -44,7 +44,7 @@ fn one_digit(num: i32) -> (i32, String) {
 }
 
 /// Convert an integer to its german word
-pub fn num_to_text(n: i32) -> String {
+pub fn to_text(n: i32) -> String {
     let mut out = String::new();
     let mut num = n;
     //fail-fast
@@ -73,7 +73,7 @@ pub fn num_to_text(n: i32) -> String {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
+    use super::to_text as num_to_text;
     #[test]
     fn to_text() {
         assert_eq!(num_to_text(81), "einundachtzig".to_string());
